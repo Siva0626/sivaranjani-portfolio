@@ -1,0 +1,32 @@
+.button-group { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 2rem; }
+.button { display: inline-flex; justify-content: center; align-items: center; min-height: 2.75rem; padding: 0.65rem 1rem; border: 1px solid transparent; border-radius: 0.4rem; font-weight: 750; text-decoration: none; transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease, transform 160ms ease; }
+.button--primary { background: #0d6f72; color: #fff; }
+.button--primary:hover { background: #09595c; color: #fff; }
+.button--secondary { color: #17202a; border-color: #677174; }
+.button--secondary:hover { background: #e8e4d8; color: #17202a; }
+.button:active { transform: translateY(1px); }
+.button[aria-disabled="true"], .button:disabled { cursor: not-allowed; opacity: 0.55; transform: none; }
+.capability-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.75rem; padding: 0; list-style: none; }
+.capability-list a { display: block; min-height: 100%; padding: 1rem; background: #eeeade; border: 1px solid #ded8c9; border-radius: 0.45rem; font-weight: 700; text-decoration: none; }
+.capability-list a:hover { background: #e2dbc9; }
+.project-grid, .skill-grid { display: grid; gap: 1rem; }
+.project-card, .skill-group, .empty-state, .notice { border: 1px solid #d8d5cc; border-radius: 0.65rem; background: #fffefa; }
+.project-card { overflow: hidden; display: flex; flex-direction: column; }
+.project-card__visual { min-height: 9rem; display: grid; place-items: center; padding: 1rem; background: linear-gradient(135deg, #dce8e3, #e9e1ce); color: #53605e; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+.project-card__body { padding: 1.35rem; }
+.project-card__details { display: grid; gap: 0.85rem; margin: 1.25rem 0 0; }
+.project-card__details div { display: grid; gap: 0.1rem; }
+.project-card__details dt { color: #59666c; font-size: 0.78rem; font-weight: 750; text-transform: uppercase; letter-spacing: 0.06em; }
+.project-card__details dd { margin: 0; }
+.skill-group { padding: 1.25rem; }
+.skill-group ul { margin: 0; }
+.cta-section { margin-block: 2rem; padding-inline: clamp(1.4rem, 5vw, 3rem); background: #e8e4d8; border-radius: 0.75rem; }
+.cta-section h2 { max-width: 32rem; }
+.cta-section p { max-width: 40rem; }
+.professional-links { display: grid; gap: 1rem; max-width: 42rem; }
+.professional-links div { padding: 1rem; border-bottom: 1px solid #d8d5cc; }
+.professional-links dt { font-weight: 750; }
+.professional-links dd { margin: 0.25rem 0 0; color: #4d595f; overflow-wrap: anywhere; }
+.empty-state, .notice { padding: 1.5rem; }
+@media (min-width: 42rem) { .project-grid, .skill-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .capability-list { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (min-width: 68rem) { .project-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } .skill-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }

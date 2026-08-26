@@ -1,0 +1,32 @@
+.app-shell { min-height: 100vh; display: flex; flex-direction: column; }
+main { flex: 1; }
+.page-container { width: min(100% - 2rem, 72rem); margin-inline: auto; }
+.site-header { position: sticky; top: 0; z-index: 10; background: rgb(248 247 243 / 0.96); border-bottom: 1px solid #d8d5cc; backdrop-filter: blur(10px); }
+.header-inner { min-height: 4.75rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.site-identity, .footer-identity { text-decoration: none; font-weight: 750; }
+.site-identity__name { display: block; font-size: 0.95rem; }
+.site-identity__label { display: block; color: #56616a; font-size: 0.76rem; font-weight: 500; }
+.navigation-panel { display: none; width: 100%; }
+.navigation-panel--open { display: block; position: absolute; top: 100%; left: 0; padding: 1rem; background: #f8f7f3; border-bottom: 1px solid #d8d5cc; }
+.primary-navigation, .footer-navigation { list-style: none; padding: 0; margin: 0; }
+.primary-navigation { display: grid; gap: 0.25rem; }
+.nav-link { display: block; padding: 0.6rem 0.75rem; text-decoration: none; border-radius: 0.35rem; }
+.nav-link:hover, .nav-link--active { background: #e8e4d8; color: #17202a; }
+.nav-link--active { font-weight: 750; }
+.mobile-menu-button { padding: 0.5rem 0.75rem; color: #17202a; background: transparent; border: 1px solid #8b9295; border-radius: 0.35rem; cursor: pointer; }
+.mobile-menu-button:hover { background: #e8e4d8; }
+.mobile-menu-button:active { transform: translateY(1px); }
+.section, .cta-section { padding-block: clamp(3.25rem, 8vw, 6.5rem); }
+.page-intro { padding-bottom: 2rem; }
+.hero { padding-block: clamp(4.75rem, 12vw, 9rem) clamp(4rem, 9vw, 7rem); max-width: 50rem; }
+.hero__title { font-size: clamp(1.25rem, 2vw, 1.65rem); font-weight: 700; color: #7a3e18; }
+.hero__intro { max-width: 43rem; font-size: 1.15rem; }
+.section-heading { max-width: 44rem; margin-bottom: 2rem; }
+.section-heading > p:last-child { color: #56616a; }
+.eyebrow { margin-bottom: 0.65rem; color: #7a3e18; font-size: 0.78rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
+.site-footer { background: #17202a; color: #eef1ef; padding-block: 2.5rem; }
+.site-footer p { color: #bec7c7; }
+.footer-inner { display: grid; gap: 2rem; }
+.footer-navigation { display: flex; flex-wrap: wrap; gap: 0.75rem 1.2rem; }
+.footer-navigation a:hover { color: #fff; }
+@media (min-width: 54rem) { .mobile-menu-button { display: none; } .navigation-panel { display: block; width: auto; } .primary-navigation { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 0.1rem; } .navigation-panel--open { position: static; padding: 0; border: 0; background: transparent; } .footer-inner { grid-template-columns: 1fr 2fr; align-items: start; } }
