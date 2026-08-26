@@ -15,6 +15,14 @@ const supabase = createClient(
 app.use(cors())
 app.use(express.json())
 
+// Root route
+app.get('/', (req, res) => {
+  res.json({
+    success: true,
+    message: 'Sivaranjani Portfolio API is live',
+  })
+})
+
 // Health check
 app.get('/api/health', (req, res) => {
   res.json({
