@@ -2,6 +2,7 @@ import { useState, type FormEvent } from 'react'
 import { PageContainer, Section, SectionHeading } from '../components/content/Layout'
 import { ProfessionalLinks } from '../components/content/ProfessionalLinks'
 
+const API_BASE_URL =  import.meta.env.VITE_API_URL || 'http://localhost:5000'
 export function ContactPage() {
   const [form, setForm] = useState({
     name: '',
@@ -28,7 +29,7 @@ export function ContactPage() {
     setIsSubmitting(true)
 
     try {
-      const response = await fetch('http://localhost:5000/api/contact', {
+      const response = await fetch(`${API_BASE_URL}/api/contact`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
