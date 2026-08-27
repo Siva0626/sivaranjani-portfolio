@@ -6,7 +6,7 @@ const { createClient } = require('@supabase/supabase-js')
 
 const app = express()
 const PORT = process.env.PORT || 5000
-
+console.log('SERVER VERSION: 2026-08-27-HEALTH-FIX')
 const supabase = createClient(
   process.env.SUPABASE_URL,
   process.env.SUPABASE_SERVICE_ROLE_KEY
