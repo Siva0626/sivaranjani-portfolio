@@ -100,78 +100,81 @@ function PortfolioObject({ reducedMotion }: { reducedMotion: boolean }) {
   return (
     <group ref={groupRef}>
       <Float
-        speed={reducedMotion ? 0 : 1}
-        rotationIntensity={reducedMotion ? 0 : 0.08}
-        floatIntensity={reducedMotion ? 0 : 0.2}
+        speed={reducedMotion ? 0 : 1.2}
+        rotationIntensity={reducedMotion ? 0 : 0.18}
+        floatIntensity={reducedMotion ? 0 : 0.26}
       >
         <RoundedBox
-          args={[2.8, 2.1, 0.22]}
+          args={[3.1, 2.2, 0.24]}
           radius={0.18}
-          smoothness={5}
+          smoothness={6}
         >
-          <meshStandardMaterial color="#1c5b5b" metalness={0.12} roughness={0.5} />
+          <meshStandardMaterial color="#0D0D0D" metalness={0.18} roughness={0.4} emissive="#111111" emissiveIntensity={0.2} />
 
           <Text
-            position={[0, 0.45, 0.15]}
-            fontSize={0.23}
-            maxWidth={2.2}
+            position={[0, 0.5, 0.15]}
+            fontSize={0.22}
+            maxWidth={2.8}
             textAlign="center"
             anchorX="center"
             anchorY="middle"
+            color="#F4F3EF"
           >
             SIVARANJANI
           </Text>
 
           <Text
-            position={[0, 0.05, 0.15]}
-            fontSize={0.15}
-            maxWidth={2.2}
+            position={[0, 0.08, 0.15]}
+            fontSize={0.13}
+            maxWidth={2.8}
             textAlign="center"
             anchorX="center"
             anchorY="middle"
+            color="#D8FF3D"
           >
             OPERATIONS • MANAGEMENT
           </Text>
 
           <Text
-            position={[0, -0.3, 0.15]}
-            fontSize={0.12}
-            maxWidth={2.2}
+            position={[0, -0.28, 0.15]}
+            fontSize={0.11}
+            maxWidth={2.8}
             textAlign="center"
             anchorX="center"
             anchorY="middle"
+            color="#F4F3EF"
           >
-            AI • LEARNING • DATA • DIGITAL
+            AI • DIGITAL • DATA
           </Text>
         </RoundedBox>
       </Float>
 
       <SkillCard
-        position={[-2.15, 1.25, -0.25]}
+        position={[-2.25, 1.35, -0.35]}
         rotation={[0, 0, -0.08]}
         title="OPERATIONS"
         subtitle="Workflow & Management"
       />
 
       <SkillCard
-        position={[2.15, 1.05, -0.35]}
+        position={[2.3, 1.2, -0.18]}
         rotation={[0, 0, 0.08]}
-        title="LEARNING"
-        subtitle="Course Creation"
+        title="MANAGEMENT"
+        subtitle="Operational Strategy"
       />
 
       <SkillCard
-        position={[-2.05, -1.35, -0.35]}
+        position={[-2.15, -1.4, -0.4]}
         rotation={[0, 0, 0.06]}
-        title="DATA"
-        subtitle="Analysis & Reporting"
-      />
-
-      <SkillCard
-        position={[2.05, -1.3, -0.25]}
-        rotation={[0, 0, -0.06]}
         title="DIGITAL"
         subtitle="AI & Development"
+      />
+
+      <SkillCard
+        position={[2.1, -1.35, -0.2]}
+        rotation={[0, 0, -0.06]}
+        title="AI"
+        subtitle="Creative Systems"
       />
     </group>
   )
@@ -204,12 +207,12 @@ export function PortfolioScene() {
         gl={{ antialias: true, powerPreference: 'high-performance' }}
         frameloop={reducedMotion ? 'demand' : 'always'}
       >
-        <color attach="background" args={['#efe4cf']} />
+        <color attach="background" args={['#0D0D0D']} />
         <ambientLight intensity={1.8} />
 
-        <directionalLight position={[4, 5, 6]} intensity={2} />
-        <pointLight position={[-4, -2, 4]} intensity={1} />
-        <pointLight position={[3, -3, 2]} intensity={0.7} />
+        <directionalLight position={[4, 5, 6]} intensity={2.3} color="#F4F3EF" />
+        <pointLight position={[-4, -2, 4]} intensity={1.4} color="#D8FF3D" />
+        <pointLight position={[3, -3, 2]} intensity={1.1} color="#FFFFFF" />
 
         <PortfolioObject reducedMotion={reducedMotion} />
 
