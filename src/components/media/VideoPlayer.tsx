@@ -9,6 +9,10 @@ export function VideoPlayer({ title, imageSrc }: VideoPlayerProps) {
 
   return (
     <div className="video-player">
+      <div className="video-player__label-row">
+        <span className="video-player__label">Watch my work</span>
+      </div>
+
       <video
         className="video-player__screen"
         controls

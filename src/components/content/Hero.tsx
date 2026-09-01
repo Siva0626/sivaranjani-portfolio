@@ -13,7 +13,7 @@ export function Hero() {
         <div className="hero-modern__content">
           <p className="hero-modern__eyebrow">Operations • Digital Work • AI-Assisted Growth</p>
 
-          <h1 id="home-title">
+          <h1 id="home-title" className="hero-modern__headline">
             <span>{nameParts[0]}</span>
             <span>{nameParts.slice(1).join(' ')}</span>
             <span className="hero-modern__accent">Operations.</span>
