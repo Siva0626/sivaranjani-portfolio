@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sivaranjani-portfolio-web.sivaranjani0626.workers.dev/sitemap.xml
